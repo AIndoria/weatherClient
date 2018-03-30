@@ -1,6 +1,7 @@
 html, body{
   font-family:"IBM Plex Serif", serif;
-  background:gainsboro;
+  background:rgb(5, 1, 27);
+  color:gainsboro;
   height:100%;
 }
 .main-container{
@@ -15,6 +16,8 @@ html, body{
   height:100%;
 }
 .welcome-display{
+  flex-direction:column;
+  font-size:40px;
   display:flex;
   justify-content:center;
   align-items:center;
