@@ -3,17 +3,21 @@
   <head>
     <meta charset="UTF-8"> 
     <title>Simple Weather Client</title>
+    <link rel="stylesheet" type="text/css" href="css/owfont-regular.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif|Source+Code+Pro"> 
   </head>
   <body>
     <div class="main-container">
       <div class="welcome-display">Hello
         <div class="welcome-display-2">It's</div>
       </div>
-      <div class="temp-display" id="temp"></div>
-      <div class="location-display">Toronto, CA</div>
-      <div class="attribution-display">Powered by Batman</div>
+      <div class="temp-display">
+        <div class="temp-left" id="temp"></div>
+        <div class="temp-units" onclick="changeUnits();" id="units">℃</div>
+      </div>
+      <div class="location-display" id="location"></div>
+      <div class="attribution-display">Powered by OWS</div>
     </div>
     <script src="js/script.js"></script>
   </body>

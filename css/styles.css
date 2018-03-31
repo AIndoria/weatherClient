@@ -1,3 +1,4 @@
+/*TODO: add media-queries for responsive design, add animation*/
 html, body{
   font-family:"IBM Plex Serif", serif;
   background:rgb(5, 1, 27);
@@ -7,46 +8,73 @@ html, body{
 .main-container{
   display: grid;
   grid-template-rows: 20% 50% 20% 10%;
-  grid-template-columns:repeat(5,20%);
-  grid-row-gap: 0px;
+  grid-template-columns:repeat(5, 1fr);
   grid-column-gap:10px;
-
-  border: 1px solid red;
-  margin:0 10px;
   height:100%;
 }
 .welcome-display{
   flex-direction:column;
   font-size:40px;
   display:flex;
+  flex-basis:100%;
   justify-content:center;
   align-items:center;
   text-align:center;
-
-  grid-area:1/3/1/4;
-  border:1px dotted blue;
+  background:rgb(19, 17, 17);
+  grid-area:1/1/1/6;
+  box-shadow:1px 1px 1px black;
+  animation: fadein 2s;
 }
+
 .temp-display{
+  
   display:flex;
-  justify-content:center;
   align-items:center;
-
   grid-area:2/2/2/5;
-  border:1px dotted green;
+  font-size:10em;
+  background:transparent;
+  font-family:"Source Code Pro", sans-serif;
+  
 }
+.temp-left{
+  justify-content:right;
+  display:flex;
+  flex:2;
+  font-size:1.75em;
+}
+.temp-units{
+  display:flex;
+  flex:1;
+  justify-content: start;
+  animation: fadein 2s;
+}
+
 .location-display{
   display:flex;
   justify-content:center;
   align-items:center;
+  font-size:5em;
 
-  grid-area:3/2/3/5;
-  border:1px dotted yellow;
+  background:rgb(19, 17, 17);
+  grid-area:3/1/3/6;
+  box-shadow:1px 1px 1px black;
 }
 .attribution-display{
   display:flex;
   justify-content:center;
   align-items:center;
+  color:gainsboro;
+  background:rgb(5, 1, 27);
+  grid-area:4/1/4/6;
+  
+}
 
-  grid-area:4/3/4/3;
-  border:1px dotted magenta;
+/*Animations*/
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
